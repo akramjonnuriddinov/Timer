@@ -51,19 +51,19 @@ elNewButton.addEventListener('click', () => {
     clearInterval(interval);
     interval = setInterval(startTimer, 10);
 
-   
+    elResults.classList.add('results--show');
     
     // CLEAR RESULTS AND HIDE RESULTS CLEAR BUTTON
     elResultsClear.addEventListener('click', () => {
         block.innerText = '';
         count = 0;
         elResultsClear.classList.add('results__clear--none');
+        elResults.classList.remove('results--show');
     });
     // CLEAR RESULTS BUTTON QAYTA PAYDO BO'LISHI UCHUN
     elResultsClear.classList.remove('results__clear--none');
 
 });
-
 
 // FUNCTION startTimer
 function startTimer() {
@@ -74,8 +74,7 @@ function startTimer() {
         elMillisecond.innerText = '0' + millisecond;
     } if (millisecond > 9) {
         elMillisecond.innerText = millisecond;
-    }
-    if (millisecond > 99) {
+    } if (millisecond > 99) {
         second++;
         elSecond.innerText = '0' + second;
         millisecond = '0';
@@ -85,11 +84,9 @@ function startTimer() {
     // SECOND
     if (second < 9) {
         elSecond.innerText = '0' + second;  
-    }
-    if (second > 9) {
+    } if (second > 9) {
         elSecond.innerText = second;
-    }
-    if (second > 60) {
+    } if (second > 60) {
         minute++;
         elMinute.innerText = '0' + minute;
         second = 0;
@@ -123,7 +120,6 @@ function disableBtn() {
         elNewButton.disabled = true;
     }
 }
-
 disableBtn();
 
 function notDisableBtn() {

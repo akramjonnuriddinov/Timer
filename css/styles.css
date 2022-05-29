@@ -126,6 +126,11 @@ body {
     text-align: center;
     overflow-y: auto;
     height: 200px;
+    display: none;
+}
+
+.results--show {
+    display: block;
 }
 
 .results__title {
