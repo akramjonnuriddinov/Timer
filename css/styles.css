@@ -1,0 +1,155 @@
+:root {
+    --main-color1: #2987be;
+    --main-color2: #1059b8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: #222;
+    color: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    color: #222;
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container {
+    width: 100%;
+    max-width: 1220px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timer-container {
+    padding-top: 100px;
+}
+
+.timer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timer__block {
+    width: 150px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.time {
+    background-color: var(--main-color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 150px;
+    font-size: 90px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.title {
+    background-color: var(--main-color2);
+    padding: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.button {
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    width: 100px;
+    transition: .4s ease-in-out;
+    cursor: pointer;
+}
+
+.start,
+.stop {
+    color: var(--main-color1);
+}
+
+.start:hover,
+.stop:hover {
+    background-color: var(--main-color2);
+    color: #fff;
+}
+
+.pause:hover,
+.new:hover {
+    background-color: var(--main-color1);
+    color: #fff;
+}
+
+.new:disabled {
+    background-color: none;
+    cursor: not-allowed;
+}
+
+.new:disabled:hover {
+    background-color: rgb(233, 173, 173);
+}
+
+.results {
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+    border: 1px solid var(--main-color1);
+    padding: 20px;
+    color: var(--main-color2);
+    width: 250px;
+    font-size: 18px;
+    text-align: center;
+    overflow-y: auto;
+    height: 200px;
+}
+
+.results__title {
+    font-size: 18px;
+}
+
+.results__info {
+    margin-top: 10px;
+    background-color: var(--main-color1);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.results__clear {
+    display: none;
+    margin-top: 15px;
+}
+
+.results__clear--show {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.results__clear--none {
+    display: none;
+}
